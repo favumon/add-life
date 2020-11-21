@@ -1,4 +1,5 @@
 import 'package:add_life/ui/views/login/login_screen.dart';
+import 'package:add_life/ui/views/signup/signup_screen.dart';
 import 'package:add_life/ui/widgets/gradient_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -56,12 +57,13 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               CupertinoButton(
-                  child: (Text(
-                    'signup_button_text'.tr,
-                    style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.black87, fontWeight: FontWeight.bold),
-                  )),
-                  onPressed: () {}),
+                child: (Text(
+                  'signup_button_text'.tr,
+                  style: Theme.of(context).textTheme.headline4.copyWith(
+                      color: Colors.black87, fontWeight: FontWeight.bold),
+                )),
+                onPressed: () => Get.to(SignupScreen()),
+              ),
               SizedBox(
                 height: 20,
               )
