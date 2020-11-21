@@ -1,3 +1,4 @@
+import 'package:add_life/ui/views/best_sell/best_sell_products_screen.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
 import 'package:add_life/utils/extensions.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +17,12 @@ class BestSellWidget extends StatelessWidget {
               'Best Sell',
               style: Theme.of(context).textTheme.headline2,
             ),
-            Text(
-              'See all',
-              style: Theme.of(context).textTheme.bodyText1,
+            GestureDetector(
+              onTap: () => Get.to(BestSellProductsScreen()),
+              child: Text(
+                'See all',
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
             )
           ],
         ),

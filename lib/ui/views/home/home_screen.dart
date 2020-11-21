@@ -2,11 +2,11 @@ import 'package:add_life/ui/images.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
 import 'package:add_life/ui/views/home/widgets/best_sell_widget.dart';
 import 'package:add_life/ui/views/home/widgets/categories_widget.dart';
+import 'package:add_life/ui/views/home/widgets/drawer_widget.dart';
 import 'package:add_life/ui/views/home/widgets/featured_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
 class HomeScreen extends StatelessWidget {
   final HomeScreenController controller = Get.put(HomeScreenController());
@@ -14,14 +14,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      drawer: DrawerWidget(),
       appBar: AppBar(
         leading: Container(
-          alignment: Alignment.center,
-          child: SvgPicture.asset(
-            hamburgerMenu,
-            height: 25,
-          ),
-        ),
+            alignment: Alignment.center,
+            child: Builder(builder: (context) {
+              return IconButton(
+                  icon: SvgPicture.asset(
+                    hamburgerMenu,
+                    height: 25,
+                  ),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  });
+            })),
         actions: [
           IconButton(
             icon: Icon(
@@ -41,7 +47,8 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
@@ -61,11 +68,11 @@ class HomeScreen extends StatelessWidget {
                       icon: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.search,
                             size: 40,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Container(
@@ -77,15 +84,15 @@ class HomeScreen extends StatelessWidget {
                       )),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               CategoriesWidget(),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               FeaturedWidget(),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               BestSellWidget()

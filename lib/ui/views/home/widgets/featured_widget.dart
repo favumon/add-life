@@ -1,3 +1,4 @@
+import 'package:add_life/ui/views/featured/featured_products_screen.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
 import 'package:add_life/utils/extensions.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,12 @@ class FeaturedWidget extends StatelessWidget {
               'Featured',
               style: Theme.of(context).textTheme.headline2,
             ),
-            Text(
-              'See all',
-              style: Theme.of(context).textTheme.bodyText1,
+            GestureDetector(
+              onTap: () => Get.to(FeaturedProductsScreen()),
+              child: Text(
+                'See all',
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
             )
           ],
         ),

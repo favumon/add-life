@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: GradientButton(
                   buttonText: 'log_in_button_text'.tr,
-                  onPressed: () => Get.to(LoginScreen()),
+                  onPressed: () => Get.off(LoginScreen()),
                 ),
               ),
               CupertinoButton(
@@ -62,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline4.copyWith(
                       color: Colors.black87, fontWeight: FontWeight.bold),
                 )),
-                onPressed: () => Get.to(SignupScreen()),
+                onPressed: () => Get.off(SignupScreen()),
               ),
               SizedBox(
                 height: 20,

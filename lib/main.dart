@@ -1,5 +1,8 @@
 import 'package:add_life/ui/theme.dart';
 import 'package:add_life/ui/translation.dart';
+import 'package:add_life/ui/views/best_sell/best_sell_products_screen.dart';
+import 'package:add_life/ui/views/featured/featured_products_screen.dart';
+import 'package:add_life/ui/views/home/home_screen.dart';
 import 'package:add_life/ui/views/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
