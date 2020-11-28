@@ -1,3 +1,4 @@
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/login/login_screen.dart';
 import 'package:add_life/ui/views/signup/signup_screen.dart';
 import 'package:add_life/ui/widgets/gradient_button.dart';
@@ -53,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: GradientButton(
                   buttonText: 'log_in_button_text'.tr,
-                  onPressed: () => Get.off(LoginScreen()),
+                  onPressed: () => Get.offNamed(loginScreen),
                 ),
               ),
               CupertinoButton(
@@ -62,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline4.copyWith(
                       color: Colors.black87, fontWeight: FontWeight.bold),
                 )),
-                onPressed: () => Get.off(SignupScreen()),
+                onPressed: () => Get.offNamed(signupScreen),
               ),
               SizedBox(
                 height: 20,

@@ -1,13 +1,12 @@
-import 'package:add_life/ui/views/home/home_screen.dart';
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/login/login_controller.dart';
-import 'package:add_life/ui/views/signup/signup_screen.dart';
 import 'package:add_life/ui/widgets/gradient_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
-  final LoginController controller = Get.put(LoginController());
+  final LoginController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +55,7 @@ class LoginScreen extends StatelessWidget {
               ),
               GradientButton(
                 buttonText: 'log_in_button_text'.tr,
-                onPressed: () => Get.off(HomeScreen()),
+                onPressed: () => Get.offNamed(homeScreen),
               ),
               SizedBox(
                 height: 20,
@@ -77,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText1.copyWith(
                           color: Colors.black87, fontWeight: FontWeight.w500),
                     ),
-                    onPressed: () => Get.off(SignupScreen()),
+                    onPressed: () => Get.offAllNamed(signupScreen),
                   )
                 ],
               )

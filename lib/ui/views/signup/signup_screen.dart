@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SignupScreen extends StatelessWidget {
-  final SignupController controller = Get.put(SignupController());
+  final SignupController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

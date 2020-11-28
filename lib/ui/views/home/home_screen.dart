@@ -9,7 +9,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  final HomeScreenController controller = Get.put(HomeScreenController());
+  final HomeScreenController controller = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

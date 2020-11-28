@@ -1,3 +1,4 @@
+import 'package:add_life/ui/views/product_info/product_details_screen.dart';
 import 'package:add_life/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -49,54 +50,62 @@ class FeaturedProductsScreen extends StatelessWidget {
                                   childAspectRatio: .78,
                                   children: List.generate(
                                     _controller.featuredProducts.length,
-                                    (index) => Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          alignment: Alignment.center,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: NetworkImage(_controller
-                                                    .featuredProducts[index]
-                                                    .image),
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(10)),
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: 5),
-                                          height: 180,
-                                          width: 160,
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          _controller
-                                              .featuredProducts[index].rate
-                                              .toCurrency(),
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1
-                                              .copyWith(
-                                                  color: Colors.black87,
-                                                  fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        Text(
-                                          _controller
-                                              .featuredProducts[index].name,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyText1
-                                              .copyWith(
-                                                  color: Colors.black87,
-                                                  fontWeight: FontWeight.bold),
-                                        )
-                                      ],
+                                    (index) => InkWell(
+                                      onTap: () =>
+                                          Get.to(ProductDetailsScreen()),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            alignment: Alignment.center,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  fit: BoxFit.cover,
+                                                  image: NetworkImage(
+                                                      _controller
+                                                          .featuredProducts[
+                                                              index]
+                                                          .image),
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            margin: EdgeInsets.symmetric(
+                                                horizontal: 5),
+                                            height: 180,
+                                            width: 160,
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            _controller
+                                                .featuredProducts[index].rate
+                                                .toCurrency(),
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1
+                                                .copyWith(
+                                                    color: Colors.black87,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            _controller
+                                                .featuredProducts[index].name,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyText1
+                                                .copyWith(
+                                                    color: Colors.black87,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   )
 

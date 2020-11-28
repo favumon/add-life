@@ -1,3 +1,4 @@
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/best_sell/best_sell_products_screen.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
 import 'package:add_life/utils/extensions.dart';
@@ -18,7 +19,7 @@ class BestSellWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.headline2,
             ),
             GestureDetector(
-              onTap: () => Get.to(BestSellProductsScreen()),
+              onTap: () => Get.toNamed(bestSellProductsScreen),
               child: Text(
                 'See all',
                 style: Theme.of(context).textTheme.bodyText1,

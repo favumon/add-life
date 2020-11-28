@@ -1,5 +1,7 @@
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/featured/featured_products_screen.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
+import 'package:add_life/ui/views/product_info/product_details_screen.dart';
 import 'package:add_life/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,7 +21,7 @@ class FeaturedWidget extends StatelessWidget {
               style: Theme.of(context).textTheme.headline2,
             ),
             GestureDetector(
-              onTap: () => Get.to(FeaturedProductsScreen()),
+              onTap: () => Get.toNamed(featuredProductsScreen),
               child: Text(
                 'See all',
                 style: Theme.of(context).textTheme.bodyText1,
@@ -35,39 +37,43 @@ class FeaturedWidget extends StatelessWidget {
           child: Obx(() => ListView.builder(
                 itemCount: _controller.featuredItems.length,
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                _controller.featuredItems[index].image),
-                          ),
-                          borderRadius: BorderRadius.circular(10)),
-                      margin: EdgeInsets.symmetric(horizontal: 5),
-                      height: 180,
-                      width: 160,
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      _controller.featuredItems[index].rate.toCurrency(),
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                          color: Colors.black87, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      _controller.featuredItems[index].name,
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                          color: Colors.black87, fontWeight: FontWeight.bold),
-                    )
-                  ],
+                itemBuilder: (context, index) => InkWell(
+                  borderRadius: BorderRadius.circular(10),
+                  onTap: () => Get.toNamed(productDetailScreen),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  _controller.featuredItems[index].image),
+                            ),
+                            borderRadius: BorderRadius.circular(10)),
+                        margin: EdgeInsets.symmetric(horizontal: 5),
+                        height: 180,
+                        width: 160,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        _controller.featuredItems[index].rate.toCurrency(),
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                            color: Colors.black87, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        _controller.featuredItems[index].name,
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                            color: Colors.black87, fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               )),
         ),
