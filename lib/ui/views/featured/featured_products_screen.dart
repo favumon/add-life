@@ -1,4 +1,5 @@
 import 'package:add_life/ui/views/product_info/product_details_screen.dart';
+import 'package:add_life/ui/widgets/back_button_app_bar.dart';
 import 'package:add_life/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,14 +14,8 @@ class FeaturedProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black87,
-          ),
-          onPressed: () => Get.back(),
-        ),
+      appBar: BackButtonAppBar(
+        showCartIcon: true,
       ),
       body: SafeArea(
         child: Padding(

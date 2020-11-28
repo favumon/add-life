@@ -6,3 +6,6 @@ const String homeScreen = 'home';
 const String featuredProductsScreen = 'featuredProductsScreen';
 const String bestSellProductsScreen = 'bestSellProductsScreen';
 const String productDetailScreen = 'productDetailScreen';
+const String cartScreen = 'cartScreen';
+const String savedAddressesScreen = 'savedAddressesScreen';
+const String addAddressScreen = 'addAddressScreen';

@@ -1,9 +1,11 @@
 import 'package:add_life/ui/images.dart';
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/home/home_screen_controller.dart';
 import 'package:add_life/ui/views/home/widgets/best_sell_widget.dart';
 import 'package:add_life/ui/views/home/widgets/categories_widget.dart';
 import 'package:add_life/ui/views/home/widgets/drawer_widget.dart';
 import 'package:add_life/ui/views/home/widgets/featured_widget.dart';
+import 'package:add_life/ui/widgets/cart_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -28,15 +30,7 @@ class HomeScreen extends StatelessWidget {
                     Scaffold.of(context).openDrawer();
                   });
             })),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.filter_alt_outlined,
-              size: 40,
-            ),
-            onPressed: () {},
-          )
-        ],
+        actions: [CartButton()],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

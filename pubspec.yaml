@@ -32,6 +32,7 @@ dependencies:
   get: ^3.15.0
   google_fonts: ^1.1.1
   carousel_slider: ^2.3.1
+  fdottedline: ^1.0.1
 
 dev_dependencies:
   flutter_test:

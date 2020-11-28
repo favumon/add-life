@@ -23,7 +23,7 @@ class GradientButton extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(
               minWidth: 88.0,
-              minHeight: 50.0), // min sizes for Material buttons
+              minHeight: 60.0), // min sizes for Material buttons
           alignment: Alignment.center,
           child: Text(
             buttonText,

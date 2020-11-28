@@ -1,3 +1,4 @@
+import 'package:add_life/ui/routes/app_routes.dart';
 import 'package:add_life/ui/views/login/login_screen.dart';
 import 'package:add_life/ui/views/signup/signup_screen_controller.dart';
 import 'package:add_life/ui/widgets/gradient_button.dart';
@@ -82,9 +83,7 @@ class SignupScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText1.copyWith(
                           color: Colors.black87, fontWeight: FontWeight.w500),
                     ),
-                    onPressed: () => Get.off(
-                      LoginScreen(),
-                    ),
+                    onPressed: () => Get.offNamed(loginScreen),
                   )
                 ],
               )
