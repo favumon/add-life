@@ -1,16 +1,6 @@
-# add_life
+A clothing flutter app using GetX
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-06 at 00 56 29](https://user-images.githubusercontent.com/2209460/128409759-e9b05263-0d63-4e9c-8cc2-ab3fbe67639a.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-06 at 00 56 33](https://user-images.githubusercontent.com/2209460/128409768-452264a1-9814-4419-b255-218ca353597c.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-06 at 00 57 00](https://user-images.githubusercontent.com/2209460/128409772-909961aa-0f78-409a-ab9f-7a745e35f903.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-06 at 00 57 05](https://user-images.githubusercontent.com/2209460/128409775-6422313b-6994-4695-b933-365e5369900d.png)
